@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
 
 <meta charset="UTF-8">
 <title>MentalSMP Rules</title>
+
 
 <style>
 
@@ -16,92 +18,170 @@
 
 
 body{
+
     background:#0d0d0d;
     color:white;
+
 }
+
 
 
 .container{
+
     max-width:1000px;
     margin:auto;
     padding:50px;
+
     animation:fadeIn 1s ease;
+
 }
 
+
+
+/* Überschrift */
 
 h1{
+
     text-align:left;
+
     color:#9b59ff;
-    font-size:65px;
-    margin-bottom:50px;
-    position:relative;
+
+    font-size:70px;
+
+    margin-bottom:70px;
+
     display:inline-block;
+
+    position:relative;
+
+    text-shadow:0 0 20px #9b59ff;
+
     animation:titleAnimation 1s ease;
-    text-shadow:0 0 15px #9b59ff;
+
 }
+
 
 
 h1::after{
+
     content:"";
+
     position:absolute;
+
     left:0;
-    bottom:-12px;
+
+    bottom:-15px;
+
     width:100%;
-    height:4px;
+
+    height:5px;
+
     background:#9b59ff;
+
     border-radius:10px;
+
 }
+
+
+
+
+/* Regel Boxen */
 
 
 .box{
 
     background:#151515;
+
     border:1px solid #292929;
+
     border-radius:20px;
+
     padding:30px;
+
     margin-bottom:40px;
 
+    transition:0.3s;
+
     animation:slideUp 1s ease;
+
 }
+
+
+
+.box:hover{
+
+    transform:translateY(-5px);
+
+    border-color:#9b59ff;
+
+    box-shadow:0 0 20px #9b59ff;
+
+}
+
+
+
 
 
 h2{
 
     color:#555555;
+
     font-size:35px;
+
     margin-bottom:25px;
 
 }
 
 
+
 .icon{
 
     font-size:35px;
+
     margin-right:10px;
 
 }
 
 
+
+
 li{
 
     color:#bdbdbd;
+
     font-size:20px;
+
     margin:15px 0;
 
+    line-height:1.4;
+
 }
+
+
+
+
+
+/* Zurück Button */
 
 
 .back{
 
     display:block;
+
     text-align:center;
-    margin-top:40px;
+
+    margin-top:50px;
 
     color:white;
+
     text-decoration:none;
+
     font-size:22px;
 
+    transition:0.3s;
+
 }
+
 
 
 .back:hover{
@@ -111,61 +191,113 @@ li{
 }
 
 
+
+
 /* Animationen */
+
 
 @keyframes fadeIn{
 
+
 from{
+
     opacity:0;
+
 }
+
 
 to{
+
     opacity:1;
-}
 
 }
+
+
+}
+
+
+
+
+@keyframes titleAnimation{
+
+
+from{
+
+    opacity:0;
+
+    transform:translateX(-60px);
+
+}
+
+
+to{
+
+    opacity:1;
+
+    transform:translateX(0);
+
+}
+
+
+}
+
+
+
 
 
 @keyframes slideUp{
 
+
 from{
 
     opacity:0;
+
     transform:translateY(50px);
 
 }
 
+
 to{
 
     opacity:1;
+
     transform:translateY(0);
 
 }
 
+
 }
+
 
 
 </style>
 
+
 </head>
+
 
 
 <body>
 
 
+
 <div class="container">
+
 
 
 <h1>Rules</h1>
 
 
 
+
 <div class="box">
+
 
 <h2>
 <span class="icon">💬</span>
 1. Discord Rules
 </h2>
+
 
 
 <ul>
@@ -181,7 +313,9 @@ to{
 </ul>
 
 
+
 </div>
+
 
 
 
@@ -195,23 +329,33 @@ Minecraft Rules
 </h2>
 
 
+
 <ul>
+
 
 <li>Be respectfully in chat</li>
 
+
 <li>Piechart is not allowed</li>
+
 
 <li>Don't cheat, this will result in a permanent ban</li>
 
+
 <li>You are not allowed to rename the Custom Tools in an anvil</li>
+
 
 <li>It's not allowed to hide the Mace, you need to keep it in the Inventory</li>
 
+
 <li>It's not allowed to place or hide the Dragon Egg, you need to keep it in the Inventory</li>
+
 
 <li>It's not allowed to Explode Bases or Steal villagers</li>
 
+
 <li>It's allowed to steal from chests, anvils, ender chests etc.</li>
+
 
 </ul>
 
@@ -220,14 +364,20 @@ Minecraft Rules
 
 
 
+
 <a class="back" href="index.html">
+
 ⬅ Back to Home
+
 </a>
+
 
 
 
 </div>
 
 
+
 </body>
+
 </html>
