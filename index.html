@@ -4,6 +4,7 @@
 <head>
 
 <meta charset="UTF-8">
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MentalSMP | The Ultimate Minecraft SMP</title>
@@ -33,16 +34,13 @@ body{
     overflow-x:hidden;
 
     background:
-    radial-gradient(circle at top,#4c1d95 0%,transparent 35%),
-    radial-gradient(circle at bottom,#7e22ce 0%,transparent 30%),
-    linear-gradient(135deg,#050505,#0b0615,#020202);
+    radial-gradient(circle at top,#581c87 0%,transparent 35%),
+    radial-gradient(circle at bottom,#7c3aed 0%,transparent 30%),
+    linear-gradient(135deg,#020202,#10051c,#020202);
 
 }
 
 
-
-
-/* Hintergrund Animation */
 
 
 body::before{
@@ -63,7 +61,7 @@ body::before{
     top:10%;
     left:10%;
 
-    animation:moveGlow 8s infinite alternate;
+    animation:glow 10s infinite alternate;
 
     z-index:-1;
 
@@ -84,12 +82,12 @@ body::after{
 
     filter:blur(160px);
 
-    opacity:.2;
+    opacity:.25;
 
     right:10%;
     bottom:10%;
 
-    animation:moveGlow2 10s infinite alternate;
+    animation:glow2 12s infinite alternate;
 
     z-index:-1;
 
@@ -97,7 +95,7 @@ body::after{
 
 
 
-@keyframes moveGlow{
+@keyframes glow{
 
 from{
 transform:translate(0,0);
@@ -111,7 +109,7 @@ transform:translate(120px,80px);
 
 
 
-@keyframes moveGlow2{
+@keyframes glow2{
 
 from{
 transform:translate(0,0);
@@ -160,7 +158,6 @@ z-index:10;
 
 
 
-
 .logo{
 
 font-size:40px;
@@ -170,11 +167,11 @@ font-weight:900;
 color:#c084fc;
 
 text-shadow:
+
 0 0 20px #a855f7,
 0 0 50px #7c3aed;
 
 }
-
 
 
 
@@ -187,7 +184,7 @@ text-decoration:none;
 
 margin-left:35px;
 
-font-weight:600;
+font-weight:700;
 
 transition:.3s;
 
@@ -198,6 +195,8 @@ transition:.3s;
 .links a:hover{
 
 color:#c084fc;
+
+text-shadow:0 0 15px #a855f7;
 
 }
 
@@ -222,7 +221,7 @@ flex-direction:column;
 
 text-align:center;
 
-padding:120px 20px;
+padding:120px 20px 50px;
 
 }
 
@@ -239,20 +238,20 @@ letter-spacing:8px;
 
 color:#c084fc;
 
+
 text-shadow:
 
-0 0 25px #a855f7,
-0 0 70px #7c3aed,
-0 0 120px #4c1d95;
+0 0 30px #a855f7,
+0 0 80px #7c3aed;
 
 
-animation:floating 4s infinite ease-in-out;
+animation:float 4s infinite ease-in-out;
 
 }
 
 
 
-@keyframes floating{
+@keyframes float{
 
 50%{
 
@@ -261,7 +260,6 @@ transform:translateY(-15px);
 }
 
 }
-
 
 
 
@@ -285,6 +283,7 @@ margin-top:20px;
 
 .server-box{
 
+
 margin-top:50px;
 
 padding:40px 80px;
@@ -297,17 +296,21 @@ border:1px solid rgba(192,132,252,.4);
 
 backdrop-filter:blur(25px);
 
+
 box-shadow:
 
-0 0 50px rgba(168,85,247,.25);
+0 0 50px rgba(168,85,247,.3);
 
 }
+
 
 
 
 .server-title{
 
 color:#aaa;
+
+font-size:18px;
 
 }
 
@@ -328,7 +331,6 @@ margin:15px;
 
 
 
-
 .buttons{
 
 display:flex;
@@ -344,6 +346,7 @@ margin-top:25px;
 
 
 
+
 button{
 
 padding:18px 45px;
@@ -352,15 +355,15 @@ border:none;
 
 border-radius:18px;
 
+background:#a855f7;
+
+color:white;
+
 font-size:18px;
 
 font-weight:800;
 
 cursor:pointer;
-
-background:#a855f7;
-
-color:white;
 
 transition:.3s;
 
@@ -422,8 +425,6 @@ border:1px solid rgba(255,255,255,.15);
 
 
 
-
-
 .online{
 
 color:#4ade80;
@@ -459,8 +460,8 @@ gap:30px;
 
 
 
-
 .card{
+
 
 background:rgba(20,20,30,.7);
 
@@ -468,7 +469,7 @@ padding:35px;
 
 border-radius:25px;
 
-border:1px solid rgba(168,85,247,.25);
+border:1px solid rgba(168,85,247,.3);
 
 transition:.4s;
 
@@ -476,13 +477,17 @@ transition:.4s;
 
 
 
+
 .card:hover{
 
 transform:translateY(-15px);
 
-box-shadow:0 0 40px rgba(168,85,247,.4);
+box-shadow:
+
+0 0 40px rgba(168,85,247,.4);
 
 }
+
 
 
 
@@ -496,12 +501,12 @@ margin-bottom:15px;
 
 
 
-
 .card p{
 
 color:#bbb;
 
 }
+
 
 
 
@@ -534,6 +539,14 @@ height:auto;
 }
 
 
+.links{
+
+margin-top:15px;
+
+}
+
+
+
 .hero h1{
 
 font-size:60px;
@@ -549,7 +562,6 @@ padding:30px;
 
 
 }
-
 
 
 </style>
@@ -573,11 +585,10 @@ MentalSMP
 </div>
 
 
+
 <div class="links">
 
 <a href="rules.html">Rules</a>
-
-<a href="ranks.html">Ranks</a>
 
 <a href="store.html">Store</a>
 
@@ -585,6 +596,7 @@ MentalSMP
 
 
 </nav>
+
 
 
 
@@ -603,11 +615,15 @@ MentalSMP
 
 
 
+
 <p>
 
 The Ultimate Minecraft SMP Experience
 
 </p>
+
+
+
 
 
 
@@ -622,11 +638,14 @@ Minecraft Server IP
 </div>
 
 
+
 <div class="ip">
 
 MentalSMP.eu
 
 </div>
+
+
 
 
 
@@ -638,6 +657,8 @@ MentalSMP.eu
 Copy IP
 
 </button>
+
+
 
 
 <button class="discord" onclick="window.open('https://discord.gg/rwNNH5crgm')">
@@ -652,6 +673,9 @@ Discord
 
 
 
+
+
+
 <div class="status">
 
 
@@ -662,11 +686,13 @@ Discord
 </div>
 
 
+
 <div id="players">
 
 👥 Loading...
 
 </div>
+
 
 
 <div id="version">
@@ -676,15 +702,22 @@ Discord
 </div>
 
 
+
+</div>
+
+
+
+
+
 </div>
 
 
-
-</div>
 
 
 
 </section>
+
+
 
 
 
@@ -694,54 +727,99 @@ Discord
 <section class="features">
 
 
+
 <div class="card">
 
-<h2>⚔ Custom SMP</h2>
+<h2>
+
+⚔ Custom SMP
+
+</h2>
+
 
 <p>
+
 Eigene Items, Custom Enchants und einzigartige Features.
+
 </p>
+
 
 </div>
 
 
 
+
+
 <div class="card">
 
-<h2>🔥 Competitive PvP</h2>
+<h2>
+
+🔥 Competitive PvP
+
+</h2>
+
 
 <p>
-Spannende Kämpfe und ein eigenes Regelwerk.
+
+Spannende Kämpfe mit einem eigenen Regelwerk.
+
 </p>
+
 
 </div>
 
 
 
+
+
+
 <div class="card">
 
-<h2>🌎 Adventure World</h2>
+<h2>
+
+🌎 Adventure World
+
+</h2>
+
 
 <p>
+
 Erkunde eine einzigartige Minecraft Welt.
+
 </p>
 
+
 </div>
+
+
+
 
 
 
 <div class="card">
 
-<h2>🏆 Ranks</h2>
+<h2>
+
+🎁 Crates
+
+</h2>
+
 
 <p>
-Spezielle Ränge mit exklusiven Vorteilen.
+
+Sammle besondere Belohnungen aus speziellen Kisten.
+
 </p>
 
+
 </div>
+
+
 
 
 </section>
+
+
 
 
 
@@ -763,14 +841,16 @@ Spezielle Ränge mit exklusiven Vorteilen.
 <script>
 
 
+
 function copyIP(){
 
+
 navigator.clipboard.writeText("MentalSMP.eu");
+
 
 alert("MentalSMP.eu wurde kopiert!");
 
 }
-
 
 
 
@@ -781,32 +861,37 @@ try{
 
 
 let response = await fetch(
+
 "https://api.mcsrvstat.us/2/MentalSMP.eu"
+
 );
+
 
 
 let data = await response.json();
 
 
 
+
 if(data.online){
 
 
-document.getElementById("status").innerHTML =
-"🟢 Online";
 
+document.getElementById("status").innerHTML="🟢 Online";
 
 document.getElementById("status").className="online";
 
 
 
-document.getElementById("players").innerHTML =
-"👥 " + data.players.online + "/" + data.players.max + " Players";
+document.getElementById("players").innerHTML=
+
+"👥 "+data.players.online+"/"+data.players.max+" Players";
 
 
 
-document.getElementById("version").innerHTML =
-"⚔ " + data.version;
+document.getElementById("version").innerHTML=
+
+"⚔ "+data.version;
 
 
 
@@ -815,17 +900,11 @@ document.getElementById("version").innerHTML =
 else{
 
 
-document.getElementById("status").innerHTML =
-"🔴 Offline";
+document.getElementById("status").innerHTML="🔴 Offline";
 
+document.getElementById("players").innerHTML="👥 0 Players";
 
-document.getElementById("players").innerHTML =
-"👥 0 Players";
-
-
-document.getElementById("version").innerHTML =
-"⚔ SMP 1.21.6";
-
+document.getElementById("version").innerHTML="⚔ SMP 1.21.6";
 
 document.getElementById("status").className="offline";
 
@@ -839,12 +918,10 @@ document.getElementById("status").className="offline";
 catch{
 
 
-document.getElementById("status").innerHTML =
-"⚠ Fehler";
+document.getElementById("status").innerHTML="⚠ Error";
 
 
 }
-
 
 
 }
@@ -859,6 +936,8 @@ setInterval(getServerStatus,30000);
 
 
 </script>
+
+
 
 
 
