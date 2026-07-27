@@ -17,239 +17,83 @@
 
 
 *{
-
 margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
-
 }
 
 
 
 body{
 
-
 min-height:100vh;
 
 color:white;
 
-
 background:
 
-radial-gradient(circle at top,#581c87,transparent 35%),
-radial-gradient(circle at bottom,#7c3aed,transparent 30%),
-linear-gradient(135deg,#020202,#10051c,#020202);
-
-
-overflow-x:hidden;
-
+radial-gradient(circle at top,#7c3aed,transparent 35%),
+radial-gradient(circle at bottom,#4c1d95,transparent 35%),
+linear-gradient(135deg,#020202,#12051f);
 
 }
 
 
 
-
-
-body::before{
-
-
-content:"";
-
-position:fixed;
-
-width:500px;
-height:500px;
-
-
-background:#a855f7;
-
-
-filter:blur(180px);
-
-
-opacity:.25;
-
-
-top:10%;
-left:10%;
-
-
-animation:move 10s infinite alternate;
-
-
-z-index:-1;
-
-
-}
-
-
-
-
-body::after{
-
-
-content:"";
-
-position:fixed;
-
-width:400px;
-height:400px;
-
-
-background:#6366f1;
-
-
-filter:blur(160px);
-
-
-opacity:.2;
-
-
-right:10%;
-bottom:10%;
-
-
-animation:move2 12s infinite alternate;
-
-
-z-index:-1;
-
-
-}
-
-
-
-
-
-@keyframes move{
-
-
-from{
-
-transform:translate(0,0);
-
-}
-
-to{
-
-transform:translate(120px,80px);
-
-}
-
-}
-
-
-
-@keyframes move2{
-
-
-from{
-
-transform:translate(0,0);
-
-}
-
-to{
-
-transform:translate(-100px,-80px);
-
-}
-
-}
-
-
-
-
-
-
-/* NAVIGATION */
 
 
 nav{
 
+height:90px;
 
-height:100px;
-
-
-padding:0 70px;
-
+padding:0 60px;
 
 display:flex;
 
-
 justify-content:space-between;
-
 
 align-items:center;
 
-
-background:rgba(0,0,0,.35);
-
+background:rgba(0,0,0,.45);
 
 backdrop-filter:blur(20px);
 
-
 border-bottom:1px solid rgba(255,255,255,.1);
 
-
 }
-
 
 
 
 .logo{
 
-
-font-size:40px;
-
+font-size:38px;
 
 font-weight:900;
 
-
 color:#c084fc;
 
-
-text-shadow:
-
-
-0 0 20px #a855f7;
-
+text-shadow:0 0 25px #a855f7;
 
 }
-
-
 
 
 
 .home{
 
-
 color:white;
-
 
 text-decoration:none;
 
-
 font-weight:700;
 
-
-font-size:18px;
-
-
-transition:.3s;
-
-
 }
-
 
 
 
 .home:hover{
 
-
 color:#c084fc;
-
 
 }
 
@@ -257,20 +101,11 @@ color:#c084fc;
 
 
 
-
-
-/* HEADER */
-
-
-
 .header{
-
 
 text-align:center;
 
-
-padding:80px 20px 50px;
-
+padding:80px 20px 40px;
 
 }
 
@@ -278,24 +113,16 @@ padding:80px 20px 50px;
 
 .header h1{
 
-
 font-size:90px;
-
-
-font-weight:900;
-
 
 color:#c084fc;
 
-
+font-weight:900;
 
 text-shadow:
 
-
 0 0 30px #a855f7,
 0 0 80px #7c3aed;
-
-
 
 }
 
@@ -303,12 +130,9 @@ text-shadow:
 
 .header p{
 
-
 font-size:25px;
 
-
 color:#aaa;
-
 
 }
 
@@ -316,24 +140,13 @@ color:#aaa;
 
 
 
-
-
-
-/* SHOP */
-
-
-
 .container{
-
 
 max-width:1200px;
 
-
 margin:auto;
 
-
 padding:20px;
-
 
 }
 
@@ -342,45 +155,30 @@ padding:20px;
 
 .category{
 
-
 font-size:45px;
-
 
 font-weight:900;
 
-
-color:#e9d5ff;
-
+text-align:center;
 
 margin:70px 0 30px;
 
+color:#e9d5ff;
 
-text-align:center;
-
-
-text-shadow:
-
-
-0 0 20px #a855f7;
-
+text-shadow:0 0 20px #a855f7;
 
 }
 
 
 
 
-
 .grid{
-
 
 display:grid;
 
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
 
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-
-
-gap:35px;
-
+gap:30px;
 
 }
 
@@ -390,63 +188,50 @@ gap:35px;
 
 .card{
 
+background:rgba(20,20,30,.75);
 
-background:rgba(20,20,30,.7);
-
-
-padding:40px;
-
+padding:35px;
 
 border-radius:30px;
 
-
 border:1px solid rgba(168,85,247,.3);
-
-
-backdrop-filter:blur(20px);
-
 
 transition:.4s;
 
-
 }
-
-
 
 
 
 .card:hover{
 
+transform:translateY(-10px);
 
-transform:translateY(-12px);
-
-
-box-shadow:
-
-
-0 0 40px rgba(168,85,247,.4);
-
-
-border-color:#a855f7;
-
+box-shadow:0 0 40px rgba(168,85,247,.4);
 
 }
-
 
 
 
 
 .card h2{
 
-
-font-size:35px;
-
+font-size:32px;
 
 color:#e9d5ff;
 
-
 margin-bottom:15px;
 
+}
+
+
+
+.card p{
+
+color:#ccc;
+
+line-height:1.5;
+
+margin-bottom:25px;
 
 }
 
@@ -454,20 +239,19 @@ margin-bottom:15px;
 
 
 
-.card p{
+.mental{
+
+border:2px solid #facc15;
+
+box-shadow:0 0 35px rgba(250,204,21,.4);
+
+}
 
 
-color:#ccc;
 
+.mental h2{
 
-font-size:18px;
-
-
-line-height:1.5;
-
-
-margin-bottom:25px;
-
+color:#facc15;
 
 }
 
@@ -477,27 +261,19 @@ margin-bottom:25px;
 
 .soon{
 
-
 display:inline-block;
-
 
 padding:8px 18px;
 
-
 border-radius:20px;
-
 
 background:rgba(250,204,21,.15);
 
-
 border:1px solid #facc15;
-
 
 color:#facc15;
 
-
 font-weight:800;
-
 
 }
 
@@ -507,36 +283,25 @@ font-weight:800;
 
 button{
 
-
 width:100%;
-
 
 margin-top:25px;
 
-
-padding:16px;
-
+padding:15px;
 
 border:none;
 
-
-border-radius:18px;
-
+border-radius:15px;
 
 background:#555;
 
-
 color:#aaa;
 
-
-font-size:18px;
-
+font-size:17px;
 
 font-weight:800;
 
-
 cursor:not-allowed;
-
 
 }
 
@@ -546,67 +311,37 @@ cursor:not-allowed;
 
 .back{
 
-
 display:block;
-
 
 width:max-content;
 
-
 margin:70px auto;
-
 
 padding:15px 35px;
 
-
 background:#a855f7;
-
-
-color:white;
-
 
 border-radius:20px;
 
+color:white;
 
 text-decoration:none;
 
-
 font-weight:800;
 
-
-transition:.3s;
-
-
 }
-
 
 
 
 .back:hover{
 
-
-transform:scale(1.1);
-
-
 box-shadow:0 0 30px #a855f7;
 
-
 }
-
-
-
 
 
 
 @media(max-width:700px){
-
-
-nav{
-
-padding:20px;
-
-}
-
 
 
 .header h1{
@@ -616,12 +351,11 @@ font-size:55px;
 }
 
 
-.card{
+nav{
 
-padding:25px;
+padding:20px;
 
 }
-
 
 
 .category{
@@ -635,9 +369,6 @@ font-size:35px;
 }
 
 
-
-
-
 </style>
 
 
@@ -645,11 +376,7 @@ font-size:35px;
 
 
 
-
 <body>
-
-
-
 
 
 
@@ -672,9 +399,6 @@ MentalSMP
 
 
 </nav>
-
-
-
 
 
 
@@ -706,10 +430,7 @@ Support MentalSMP and unlock exclusive rewards
 
 
 
-
 <div class="container">
-
-
 
 
 
@@ -725,17 +446,13 @@ Support MentalSMP and unlock exclusive rewards
 
 
 
-
 <div class="grid">
 
 
 
 
 
-
-
 <div class="card">
-
 
 <h2>
 
@@ -743,15 +460,11 @@ VIP
 
 </h2>
 
-
-
 <p>
 
-Get special advantages and exclusive features on MentalSMP.
+A special starter rank with exclusive advantages.
 
 </p>
-
-
 
 <div class="soon">
 
@@ -759,18 +472,13 @@ COMING SOON
 
 </div>
 
-
-
 <button>
 
 🔒 BUY NOW
 
 </button>
 
-
-
 </div>
-
 
 
 
@@ -779,7 +487,6 @@ COMING SOON
 
 
 <div class="card">
-
 
 <h2>
 
@@ -787,15 +494,11 @@ MVP
 
 </h2>
 
-
-
 <p>
 
-A higher rank with more exclusive benefits.
+More features and more benefits for dedicated players.
 
 </p>
-
-
 
 <div class="soon">
 
@@ -803,17 +506,14 @@ COMING SOON
 
 </div>
 
-
-
 <button>
 
 🔒 BUY NOW
 
 </button>
 
-
-
 </div>
+
 
 
 
@@ -823,22 +523,17 @@ COMING SOON
 
 <div class="card">
 
-
 <h2>
 
 LEGEND
 
 </h2>
 
-
-
 <p>
 
-The ultimate rank for dedicated players.
+A powerful rank for the most active players.
 
 </p>
-
-
 
 <div class="soon">
 
@@ -846,7 +541,40 @@ COMING SOON
 
 </div>
 
+<button>
 
+🔒 BUY NOW
+
+</button>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card mental">
+
+<h2>
+
+👑 MENTAL
+
+</h2>
+
+<p>
+
+The strongest rank on MentalSMP. The ultimate experience with exclusive benefits.
+
+</p>
+
+<div class="soon">
+
+BEST RANK • COMING SOON
+
+</div>
 
 <button>
 
@@ -854,8 +582,6 @@ COMING SOON
 
 </button>
 
-
-
 </div>
 
 
@@ -865,11 +591,6 @@ COMING SOON
 
 
 </div>
-
-
-
-
-
 
 
 
@@ -891,8 +612,6 @@ COMING SOON
 
 
 
-
-
 <div class="grid">
 
 
@@ -901,25 +620,19 @@ COMING SOON
 
 
 
-
 <div class="card">
-
 
 <h2>
 
-Mental Key
+📦 Common Crate
 
 </h2>
 
-
-
 <p>
 
-Open special crates with unique rewards.
+A normal crate with basic rewards.
 
 </p>
-
-
 
 <div class="soon">
 
@@ -927,18 +640,13 @@ COMING SOON
 
 </div>
 
-
-
 <button>
 
 🔒 BUY NOW
 
 </button>
 
-
-
 </div>
-
 
 
 
@@ -949,22 +657,17 @@ COMING SOON
 
 <div class="card">
 
-
 <h2>
 
-Amethyst Crate Key
+💙 Rare Crate
 
 </h2>
 
-
-
 <p>
 
-A rare crate with valuable rewards.
+A rare crate with better rewards.
 
 </p>
-
-
 
 <div class="soon">
 
@@ -972,7 +675,40 @@ COMING SOON
 
 </div>
 
+<button>
 
+🔒 BUY NOW
+
+</button>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+
+💰 Money Crate
+
+</h2>
+
+<p>
+
+A crate focused on economy rewards.
+
+</p>
+
+<div class="soon">
+
+COMING SOON
+
+</div>
 
 <button>
 
@@ -980,7 +716,75 @@ COMING SOON
 
 </button>
 
+</div>
 
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+
+🔮 Mental Key
+
+</h2>
+
+<p>
+
+A special key with unique MentalSMP rewards.
+
+</p>
+
+<div class="soon">
+
+COMING SOON
+
+</div>
+
+<button>
+
+🔒 BUY NOW
+
+</button>
+
+</div>
+
+
+
+
+
+
+
+
+<div class="card">
+
+<h2>
+
+💜 Amethyst Crate
+
+</h2>
+
+<p>
+
+A legendary crate with very special rewards.
+
+</p>
+
+<div class="soon">
+
+COMING SOON
+
+</div>
+
+<button>
+
+🔒 BUY NOW
+
+</button>
 
 </div>
 
@@ -991,9 +795,6 @@ COMING SOON
 
 
 </div>
-
-
-
 
 
 
@@ -1016,10 +817,6 @@ COMING SOON
 
 
 
-
-
-
 </body>
-
 
 </html>
