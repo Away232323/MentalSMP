@@ -1,89 +1,376 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MentalSMP</title>
 
-    <style>
-        *{
-            margin:0;
-            padding:0;
-            box-sizing:border-box;
-            font-family:Arial, Helvetica, sans-serif;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        body{
-            background:#0d0d0d;
-            color:white;
-            overflow-x:hidden;
-        }
+<title>MentalSMP | Minecraft SMP Server</title>
 
-        header{
-            height:100vh;
-            display:flex;
-            flex-direction:column;
-            justify-content:center;
-            align-items:center;
-            animation:fadeUp 1.2s;
-        }
 
-        h1{
-            font-size:70px;
-            color:#9b59ff;
-        }
+<style>
 
-        p{
-            margin-top:15px;
-            font-size:22px;
-            color:#bdbdbd;
-        }
 
-        nav{
-            margin-top:50px;
-        }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
 
-        nav a{
-            color:white;
-            text-decoration:none;
-            margin:15px;
-            font-size:22px;
-            transition:.3s;
-        }
 
-        nav a:hover{
-            color:#9b59ff;
-        }
 
-        @keyframes fadeUp{
-            from{
-                opacity:0;
-                transform:translateY(80px);
-            }
-            to{
-                opacity:1;
-                transform:translateY(0);
-            }
-        }
-    </style>
+body{
+
+    background:
+    linear-gradient(
+    rgba(13,13,13,0.75),
+    rgba(13,13,13,0.95)
+    ),
+    url("https://images.unsplash.com/photo-1607513746994-51f730a44832");
+
+    background-size:cover;
+    background-position:center;
+
+    min-height:100vh;
+
+    color:white;
+
+}
+
+
+
+/* Navigation */
+
+
+nav{
+
+    width:100%;
+
+    padding:25px 60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+}
+
+
+
+.logo{
+
+    font-size:35px;
+
+    color:#9b59ff;
+
+    font-weight:bold;
+
+    text-shadow:
+    0 0 20px #9b59ff;
+
+}
+
+
+
+.links a{
+
+    color:white;
+
+    text-decoration:none;
+
+    margin-left:30px;
+
+    font-size:20px;
+
+    transition:.3s;
+
+}
+
+
+
+.links a:hover{
+
+    color:#9b59ff;
+
+}
+
+
+
+
+/* Hauptbereich */
+
+
+.hero{
+
+    height:80vh;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    animation:show 1.2s ease;
+
+}
+
+
+
+.hero h1{
+
+    font-size:90px;
+
+    color:#9b59ff;
+
+    text-shadow:
+    0 0 30px #9b59ff;
+
+}
+
+
+
+.hero p{
+
+    margin-top:20px;
+
+    color:#bdbdbd;
+
+    font-size:28px;
+
+}
+
+
+
+
+
+.ip-box{
+
+    margin-top:40px;
+
+    background:#151515;
+
+    padding:20px 40px;
+
+    border-radius:20px;
+
+    border:1px solid #333;
+
+}
+
+
+
+.ip{
+
+    color:#9b59ff;
+
+    font-size:25px;
+
+}
+
+
+
+button{
+
+    margin-top:20px;
+
+    background:#9b59ff;
+
+    border:none;
+
+    color:white;
+
+    padding:15px 35px;
+
+    border-radius:15px;
+
+    font-size:20px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+
+
+button:hover{
+
+    transform:scale(1.08);
+
+    box-shadow:0 0 25px #9b59ff;
+
+}
+
+
+
+
+/* Animation */
+
+
+@keyframes show{
+
+from{
+
+opacity:0;
+
+transform:translateY(60px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+
+
+/* Handy */
+
+@media(max-width:700px){
+
+nav{
+
+padding:20px;
+
+flex-direction:column;
+
+}
+
+
+.links{
+
+margin-top:20px;
+
+}
+
+
+.hero h1{
+
+font-size:55px;
+
+}
+
+
+}
+
+</style>
+
 
 </head>
+
+
+
 <body>
 
-<header>
-
-<h1>MentalSMP</h1>
-
-<p>The Ultimate Minecraft SMP</p>
 
 <nav>
+
+
+<div class="logo">
+
+MentalSMP
+
+</div>
+
+
+
+<div class="links">
+
 <a href="rules.html">Rules</a>
+
 <a href="ranks.html">Ranks</a>
+
 <a href="store.html">Store</a>
+
 <a href="https://discord.gg/rwNNH5crgm">Discord</a>
+
+</div>
+
+
+
 </nav>
 
-</header>
+
+
+
+
+<section class="hero">
+
+
+<h1>
+MentalSMP
+</h1>
+
+
+
+<p>
+The Ultimate Minecraft SMP Experience
+</p>
+
+
+
+
+<div class="ip-box">
+
+
+<div>
+Server IP:
+</div>
+
+
+<div class="ip">
+
+MentalSMP.eu
+
+</div>
+
+
+
+<button onclick="copyIP()">
+
+Copy IP
+
+</button>
+
+
+</div>
+
+
+
+</section>
+
+
+
+
+<script>
+
+
+function copyIP(){
+
+navigator.clipboard.writeText("MentalSMP.eu");
+
+alert("Server IP copied!");
+
+}
+
+
+</script>
+
+
 
 </body>
+
+
 </html>
