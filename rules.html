@@ -4,117 +4,404 @@
 <head>
 
 <meta charset="UTF-8">
-<title>MentalSMP Rules</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>MentalSMP | Server Rules</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 
 <style>
 
+
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+
 }
+
 
 
 body{
 
-    background:#0d0d0d;
-    color:white;
+
+min-height:100vh;
+
+color:white;
+
+background:
+
+radial-gradient(circle at top,#581c87,transparent 35%),
+radial-gradient(circle at bottom,#7c3aed,transparent 25%),
+linear-gradient(135deg,#020202,#10051c,#020202);
+
+
+overflow-x:hidden;
+
 
 }
 
+
+
+
+
+body::before{
+
+
+content:"";
+
+position:fixed;
+
+width:500px;
+height:500px;
+
+background:#a855f7;
+
+filter:blur(180px);
+
+opacity:.25;
+
+top:10%;
+left:10%;
+
+
+animation:move 10s infinite alternate;
+
+
+z-index:-1;
+
+
+}
+
+
+
+
+body::after{
+
+
+content:"";
+
+position:fixed;
+
+width:400px;
+height:400px;
+
+background:#6366f1;
+
+filter:blur(150px);
+
+opacity:.2;
+
+right:10%;
+bottom:10%;
+
+
+animation:move2 12s infinite alternate;
+
+
+z-index:-1;
+
+
+}
+
+
+
+
+@keyframes move{
+
+
+from{
+
+transform:translate(0,0);
+
+}
+
+to{
+
+transform:translate(120px,80px);
+
+}
+
+}
+
+
+
+@keyframes move2{
+
+
+from{
+
+transform:translate(0,0);
+
+}
+
+to{
+
+transform:translate(-100px,-80px);
+
+}
+
+}
+
+
+
+
+
+/* NAV */
+
+
+nav{
+
+
+height:90px;
+
+padding:0 70px;
+
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(20px);
+
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+.logo{
+
+
+font-size:35px;
+
+font-weight:900;
+
+color:#c084fc;
+
+
+text-shadow:
+
+0 0 20px #a855f7;
+
+
+}
+
+
+
+.home{
+
+
+text-decoration:none;
+
+color:white;
+
+font-size:18px;
+
+font-weight:600;
+
+transition:.3s;
+
+
+}
+
+
+.home:hover{
+
+
+color:#c084fc;
+
+}
+
+
+
+
+
+/* HEADER */
+
+
+.header{
+
+
+text-align:center;
+
+padding:80px 20px 50px;
+
+
+}
+
+
+
+.header h1{
+
+
+font-size:90px;
+
+font-weight:900;
+
+
+color:#c084fc;
+
+
+text-shadow:
+
+
+0 0 30px #a855f7,
+0 0 80px #7c3aed;
+
+
+}
+
+
+
+.header p{
+
+
+font-size:25px;
+
+color:#aaa;
+
+
+}
+
+
+
+
+/* RULE BOX */
 
 
 .container{
 
-    max-width:1000px;
-    margin:auto;
-    padding:50px;
 
-    animation:fadeIn 1s ease;
+max-width:1100px;
+
+margin:auto;
+
+padding:20px;
+
 
 }
 
 
 
-/* Überschrift */
-
-h1{
-
-    text-align:left;
-
-    color:#9b59ff;
-
-    font-size:70px;
-
-    margin-bottom:70px;
-
-    display:inline-block;
-
-    position:relative;
-
-    text-shadow:0 0 20px #9b59ff;
-
-    animation:titleAnimation 1s ease;
-
-}
-
-
-
-h1::after{
-
-    content:"";
-
-    position:absolute;
-
-    left:0;
-
-    bottom:-15px;
-
-    width:100%;
-
-    height:5px;
-
-    background:#9b59ff;
-
-    border-radius:10px;
-
-}
-
-
-
-
-/* Regel Boxen */
 
 
 .box{
 
-    background:#151515;
 
-    border:1px solid #292929;
+background:
 
-    border-radius:20px;
+rgba(20,20,30,.65);
 
-    padding:30px;
 
-    margin-bottom:40px;
+border-radius:30px;
 
-    transition:0.3s;
 
-    animation:slideUp 1s ease;
+padding:35px;
+
+
+margin-bottom:35px;
+
+
+border:1px solid rgba(192,132,252,.25);
+
+
+backdrop-filter:blur(20px);
+
+
+transition:.4s;
+
+
+animation:show 1s ease;
+
 
 }
+
+
 
 
 
 .box:hover{
 
-    transform:translateY(-5px);
 
-    border-color:#9b59ff;
+transform:translateY(-10px);
 
-    box-shadow:0 0 20px #9b59ff;
+
+border-color:#a855f7;
+
+
+box-shadow:
+
+
+0 0 40px rgba(168,85,247,.35);
+
+
+}
+
+
+
+
+
+.title{
+
+
+display:flex;
+
+align-items:center;
+
+gap:15px;
+
+margin-bottom:25px;
+
+
+}
+
+
+
+
+
+.number{
+
+
+width:55px;
+
+height:55px;
+
+
+display:flex;
+
+align-items:center;
+
+justify-content:center;
+
+
+border-radius:50%;
+
+
+background:#a855f7;
+
+
+font-size:25px;
+
+font-weight:900;
+
+
+box-shadow:
+
+0 0 25px #a855f7;
+
 
 }
 
@@ -124,21 +411,23 @@ h1::after{
 
 h2{
 
-    color:#555555;
 
-    font-size:35px;
+font-size:35px;
 
-    margin-bottom:25px;
+color:#e9d5ff;
+
 
 }
 
 
 
-.icon{
 
-    font-size:35px;
 
-    margin-right:10px;
+ul{
+
+
+list-style:none;
+
 
 }
 
@@ -147,13 +436,39 @@ h2{
 
 li{
 
-    color:#bdbdbd;
 
-    font-size:20px;
+font-size:19px;
 
-    margin:15px 0;
+color:#d1d1d1;
 
-    line-height:1.4;
+
+margin:15px 0;
+
+
+padding-left:30px;
+
+
+position:relative;
+
+
+}
+
+
+
+
+li::before{
+
+
+content:"✦";
+
+
+position:absolute;
+
+left:0;
+
+
+color:#c084fc;
+
 
 }
 
@@ -161,80 +476,79 @@ li{
 
 
 
-/* Zurück Button */
+/* FOOTER BUTTON */
 
 
 .back{
 
-    display:block;
 
-    text-align:center;
+display:block;
 
-    margin-top:50px;
 
-    color:white;
+width:max-content;
 
-    text-decoration:none;
 
-    font-size:22px;
+margin:60px auto;
 
-    transition:0.3s;
+
+padding:15px 35px;
+
+
+border-radius:20px;
+
+
+background:#a855f7;
+
+
+color:white;
+
+
+text-decoration:none;
+
+
+font-weight:800;
+
+
+transition:.3s;
+
 
 }
+
 
 
 
 .back:hover{
 
-    color:#9b59ff;
+
+transform:scale(1.1);
+
+
+box-shadow:0 0 30px #a855f7;
+
 
 }
 
 
 
 
-/* Animationen */
 
-
-@keyframes fadeIn{
+@keyframes show{
 
 
 from{
 
-    opacity:0;
+opacity:0;
+
+transform:translateY(50px);
 
 }
 
 
 to{
 
-    opacity:1;
+opacity:1;
 
-}
-
-
-}
-
-
-
-
-@keyframes titleAnimation{
-
-
-from{
-
-    opacity:0;
-
-    transform:translateX(-60px);
-
-}
-
-
-to{
-
-    opacity:1;
-
-    transform:translateX(0);
+transform:translateY(0);
 
 }
 
@@ -245,23 +559,33 @@ to{
 
 
 
-@keyframes slideUp{
+@media(max-width:700px){
 
 
-from{
+.header h1{
 
-    opacity:0;
-
-    transform:translateY(50px);
+font-size:55px;
 
 }
 
 
-to{
+nav{
 
-    opacity:1;
+padding:20px;
 
-    transform:translateY(0);
+}
+
+
+.box{
+
+padding:25px;
+
+}
+
+
+h2{
+
+font-size:25px;
 
 }
 
@@ -281,11 +605,62 @@ to{
 
 
 
+
+<nav>
+
+
+<div class="logo">
+
+MentalSMP
+
+</div>
+
+
+
+<a class="home" href="index.html">
+
+⬅ Home
+
+</a>
+
+
+</nav>
+
+
+
+
+
+
+
+<section class="header">
+
+
+<h1>
+
+⚔ SERVER RULES ⚔
+
+</h1>
+
+
+<p>
+
+Rules that keep MentalSMP fair and enjoyable
+
+</p>
+
+
+</section>
+
+
+
+
+
+
+
 <div class="container">
 
 
 
-<h1>Rules</h1>
 
 
 
@@ -293,25 +668,43 @@ to{
 <div class="box">
 
 
+<div class="title">
+
+<div class="number">
+
+1
+
+</div>
+
+
 <h2>
-<span class="icon">💬</span>
-1. Discord Rules
+
+💬 Discord Rules
+
 </h2>
+
+
+</div>
+
 
 
 
 <ul>
 
-<li>Don't make any self promotion for YouTube channels or any other Discord servers</li>
 
-<li>Be respectfully on the Discord</li>
+<li>Don't make any self promotion for YouTube channels or other Discord servers</li>
+
+
+<li>Be respectful on the Discord</li>
+
 
 <li>Don't spam in chat</li>
 
-<li>If you see someone making an Issue make a Ticket and report it</li>
+
+<li>If you see someone making an issue create a ticket and report it</li>
+
 
 </ul>
-
 
 
 </div>
@@ -320,20 +713,36 @@ to{
 
 
 
+
+
 <div class="box">
 
 
+<div class="title">
+
+
+<div class="number">
+
+2
+
+</div>
+
+
 <h2>
-<span class="icon">⛏️</span>
-2. Minecraft Rules
+
+⛏️ Minecraft Rules
+
 </h2>
+
+
+</div>
 
 
 
 <ul>
 
 
-<li>Be respectfully in chat</li>
+<li>Be respectful in chat</li>
 
 
 <li>Piechart is not allowed</li>
@@ -342,16 +751,16 @@ to{
 <li>Don't cheat, this will result in a permanent ban</li>
 
 
-<li>You are not allowed to rename the Custom Tools in an anvil</li>
+<li>You are not allowed to rename Custom Tools in an anvil</li>
 
 
-<li>It's not allowed to hide the Mace, you need to keep it in the Inventory</li>
+<li>It's not allowed to hide the Mace, you need to keep it in your inventory</li>
 
 
-<li>It's not allowed to place or hide the Dragon Egg, you need to keep it in the Inventory</li>
+<li>It's not allowed to place or hide the Dragon Egg, you need to keep it in your inventory</li>
 
 
-<li>It's not allowed to Explode Bases or Steal villagers</li>
+<li>It's not allowed to explode bases or steal villagers</li>
 
 
 <li>It's allowed to steal from chests, anvils, ender chests etc.</li>
@@ -360,7 +769,12 @@ to{
 </ul>
 
 
+
 </div>
+
+
+
+
 
 
 
@@ -375,6 +789,8 @@ to{
 
 
 </div>
+
+
 
 
 
