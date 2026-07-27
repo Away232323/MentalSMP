@@ -4,17 +4,14 @@
 <head>
 
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>MentalSMP | Store</title>
-
 
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 
 <style>
-
 
 *{
 margin:0;
@@ -24,15 +21,12 @@ font-family:'Poppins',sans-serif;
 }
 
 
-
 body{
 
 min-height:100vh;
-
 color:white;
 
 background:
-
 radial-gradient(circle at top,#7c3aed,transparent 35%),
 radial-gradient(circle at bottom,#4c1d95,transparent 35%),
 linear-gradient(135deg,#020202,#12051f);
@@ -90,13 +84,11 @@ font-weight:700;
 }
 
 
-
 .home:hover{
 
 color:#c084fc;
 
 }
-
 
 
 
@@ -115,9 +107,9 @@ padding:80px 20px 40px;
 
 font-size:90px;
 
-color:#c084fc;
-
 font-weight:900;
+
+color:#c084fc;
 
 text-shadow:
 
@@ -139,7 +131,6 @@ color:#aaa;
 
 
 
-
 .container{
 
 max-width:1200px;
@@ -152,18 +143,17 @@ padding:20px;
 
 
 
-
 .category{
+
+text-align:center;
 
 font-size:45px;
 
 font-weight:900;
 
-text-align:center;
-
-margin:70px 0 30px;
-
 color:#e9d5ff;
+
+margin:70px 0 35px;
 
 text-shadow:0 0 20px #a855f7;
 
@@ -185,7 +175,6 @@ gap:30px;
 
 
 
-
 .card{
 
 background:rgba(20,20,30,.75);
@@ -199,6 +188,7 @@ border:1px solid rgba(168,85,247,.3);
 transition:.4s;
 
 }
+
 
 
 
@@ -229,13 +219,31 @@ margin-bottom:15px;
 
 color:#ccc;
 
-line-height:1.5;
-
-margin-bottom:25px;
+line-height:1.6;
 
 }
 
 
+
+.badge{
+
+display:inline-block;
+
+margin-top:20px;
+
+padding:8px 18px;
+
+border-radius:20px;
+
+font-weight:800;
+
+color:#facc15;
+
+border:1px solid #facc15;
+
+background:rgba(250,204,21,.15);
+
+}
 
 
 
@@ -243,7 +251,7 @@ margin-bottom:25px;
 
 border:2px solid #facc15;
 
-box-shadow:0 0 35px rgba(250,204,21,.4);
+box-shadow:0 0 35px rgba(250,204,21,.35);
 
 }
 
@@ -258,54 +266,21 @@ color:#facc15;
 
 
 
+.media{
 
-.soon{
+border:2px solid #38bdf8;
 
-display:inline-block;
-
-padding:8px 18px;
-
-border-radius:20px;
-
-background:rgba(250,204,21,.15);
-
-border:1px solid #facc15;
-
-color:#facc15;
-
-font-weight:800;
+box-shadow:0 0 35px rgba(56,189,248,.35);
 
 }
 
 
 
+.media h2{
 
-
-button{
-
-width:100%;
-
-margin-top:25px;
-
-padding:15px;
-
-border:none;
-
-border-radius:15px;
-
-background:#555;
-
-color:#aaa;
-
-font-size:17px;
-
-font-weight:800;
-
-cursor:not-allowed;
+color:#38bdf8;
 
 }
-
-
 
 
 
@@ -321,11 +296,11 @@ padding:15px 35px;
 
 background:#a855f7;
 
-border-radius:20px;
-
 color:white;
 
 text-decoration:none;
+
+border-radius:20px;
 
 font-weight:800;
 
@@ -341,8 +316,8 @@ box-shadow:0 0 30px #a855f7;
 
 
 
-@media(max-width:700px){
 
+@media(max-width:700px){
 
 .header h1{
 
@@ -350,21 +325,17 @@ font-size:55px;
 
 }
 
-
 nav{
 
 padding:20px;
 
 }
 
-
 .category{
 
 font-size:35px;
 
 }
-
-
 
 }
 
@@ -382,7 +353,6 @@ font-size:35px;
 
 <nav>
 
-
 <div class="logo">
 
 MentalSMP
@@ -390,13 +360,11 @@ MentalSMP
 </div>
 
 
-
 <a class="home" href="index.html">
 
 ⬅ Home
 
 </a>
-
 
 </nav>
 
@@ -407,20 +375,17 @@ MentalSMP
 
 <section class="header">
 
-
 <h1>
 
 🛒 STORE
 
 </h1>
 
-
 <p>
 
 Support MentalSMP and unlock exclusive rewards
 
 </p>
-
 
 </section>
 
@@ -431,6 +396,8 @@ Support MentalSMP and unlock exclusive rewards
 
 
 <div class="container">
+
+
 
 
 
@@ -455,31 +422,18 @@ Support MentalSMP and unlock exclusive rewards
 <div class="card">
 
 <h2>
-
 VIP
-
 </h2>
 
 <p>
-
-A special starter rank with exclusive advantages.
-
+A special starter rank with exclusive advantages and features.
 </p>
 
-<div class="soon">
-
+<div class="badge">
 COMING SOON
-
 </div>
 
-<button>
-
-🔒 BUY NOW
-
-</button>
-
 </div>
-
 
 
 
@@ -489,31 +443,18 @@ COMING SOON
 <div class="card">
 
 <h2>
-
 MVP
-
 </h2>
 
 <p>
-
-More features and more benefits for dedicated players.
-
+A stronger rank with more exclusive benefits for dedicated players.
 </p>
 
-<div class="soon">
-
+<div class="badge">
 COMING SOON
-
 </div>
 
-<button>
-
-🔒 BUY NOW
-
-</button>
-
 </div>
-
 
 
 
@@ -524,31 +465,18 @@ COMING SOON
 <div class="card">
 
 <h2>
-
 LEGEND
-
 </h2>
 
 <p>
-
-A powerful rank for the most active players.
-
+A powerful rank for the most active members of the community.
 </p>
 
-<div class="soon">
-
+<div class="badge">
 COMING SOON
-
 </div>
 
-<button>
-
-🔒 BUY NOW
-
-</button>
-
 </div>
-
 
 
 
@@ -559,32 +487,59 @@ COMING SOON
 <div class="card mental">
 
 <h2>
-
 👑 MENTAL
+</h2>
 
+<p>
+The highest rank on MentalSMP. The ultimate experience with exclusive benefits and special rewards.
+</p>
+
+<div class="badge">
+BEST RANK • COMING SOON
+</div>
+
+</div>
+
+
+
+
+
+
+
+<div class="card media">
+
+<h2>
+🎥 MEDIA
 </h2>
 
 <p>
 
-The strongest rank on MentalSMP. The ultimate experience with exclusive benefits.
+The Media Rank is for content creators who support MentalSMP by creating content and promoting the server.
+
+<br><br>
+
+<b>Requirements:</b>
+
+<br>
+• 50+ followers on Twitch
+<br>
+• 100+ subscribers on YouTube
+<br>
+• 1,000+ followers on TikTok
+<br>
+• Regular MentalSMP content
+<br>
+• Active promotion of the server
 
 </p>
 
-<div class="soon">
 
-BEST RANK • COMING SOON
-
-</div>
-
-<button>
-
-🔒 BUY NOW
-
-</button>
-
+<div class="badge">
+APPLICATION REQUIRED
 </div>
 
 
+</div>
 
 
 
@@ -612,6 +567,7 @@ BEST RANK • COMING SOON
 
 
 
+
 <div class="grid">
 
 
@@ -623,31 +579,18 @@ BEST RANK • COMING SOON
 <div class="card">
 
 <h2>
-
 📦 Common Crate
-
 </h2>
 
 <p>
-
-A normal crate with basic rewards.
-
+A basic crate with normal rewards.
 </p>
 
-<div class="soon">
-
+<div class="badge">
 COMING SOON
-
 </div>
 
-<button>
-
-🔒 BUY NOW
-
-</button>
-
 </div>
-
 
 
 
@@ -658,31 +601,18 @@ COMING SOON
 <div class="card">
 
 <h2>
-
 💙 Rare Crate
-
 </h2>
 
 <p>
-
-A rare crate with better rewards.
-
+A rare crate with better rewards and surprises.
 </p>
 
-<div class="soon">
-
+<div class="badge">
 COMING SOON
-
 </div>
 
-<button>
-
-🔒 BUY NOW
-
-</button>
-
 </div>
-
 
 
 
@@ -693,31 +623,18 @@ COMING SOON
 <div class="card">
 
 <h2>
-
 💰 Money Crate
-
 </h2>
 
 <p>
-
 A crate focused on economy rewards.
-
 </p>
 
-<div class="soon">
-
+<div class="badge">
 COMING SOON
-
 </div>
 
-<button>
-
-🔒 BUY NOW
-
-</button>
-
 </div>
-
 
 
 
@@ -728,31 +645,18 @@ COMING SOON
 <div class="card">
 
 <h2>
-
 🔮 Mental Key
-
 </h2>
 
 <p>
-
 A special key with unique MentalSMP rewards.
-
 </p>
 
-<div class="soon">
-
+<div class="badge">
 COMING SOON
-
 </div>
 
-<button>
-
-🔒 BUY NOW
-
-</button>
-
 </div>
-
 
 
 
@@ -763,28 +667,16 @@ COMING SOON
 <div class="card">
 
 <h2>
-
 💜 Amethyst Crate
-
 </h2>
 
 <p>
-
-A legendary crate with very special rewards.
-
+A legendary crate with very rare rewards.
 </p>
 
-<div class="soon">
-
+<div class="badge">
 COMING SOON
-
 </div>
-
-<button>
-
-🔒 BUY NOW
-
-</button>
 
 </div>
 
@@ -795,6 +687,9 @@ COMING SOON
 
 
 </div>
+
+
+
 
 
 
