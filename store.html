@@ -42,27 +42,150 @@ radial-gradient(circle at bottom,#7c3aed,transparent 30%),
 linear-gradient(135deg,#020202,#10051c,#020202);
 
 
+overflow-x:hidden;
+
+
 }
 
 
 
 
 
+body::before{
+
+
+content:"";
+
+position:fixed;
+
+width:500px;
+height:500px;
+
+
+background:#a855f7;
+
+
+filter:blur(180px);
+
+
+opacity:.25;
+
+
+top:10%;
+left:10%;
+
+
+animation:move 10s infinite alternate;
+
+
+z-index:-1;
+
+
+}
+
+
+
+
+body::after{
+
+
+content:"";
+
+position:fixed;
+
+width:400px;
+height:400px;
+
+
+background:#6366f1;
+
+
+filter:blur(160px);
+
+
+opacity:.2;
+
+
+right:10%;
+bottom:10%;
+
+
+animation:move2 12s infinite alternate;
+
+
+z-index:-1;
+
+
+}
+
+
+
+
+
+@keyframes move{
+
+
+from{
+
+transform:translate(0,0);
+
+}
+
+to{
+
+transform:translate(120px,80px);
+
+}
+
+}
+
+
+
+@keyframes move2{
+
+
+from{
+
+transform:translate(0,0);
+
+}
+
+to{
+
+transform:translate(-100px,-80px);
+
+}
+
+}
+
+
+
+
+
+
+/* NAVIGATION */
+
+
 nav{
 
 
-height:90px;
+height:100px;
+
 
 padding:0 70px;
 
+
 display:flex;
 
+
 justify-content:space-between;
+
 
 align-items:center;
 
 
 background:rgba(0,0,0,.35);
+
 
 backdrop-filter:blur(20px);
 
@@ -74,19 +197,28 @@ border-bottom:1px solid rgba(255,255,255,.1);
 
 
 
+
 .logo{
 
 
-font-size:35px;
+font-size:40px;
+
 
 font-weight:900;
 
+
 color:#c084fc;
 
-text-shadow:0 0 20px #a855f7;
+
+text-shadow:
+
+
+0 0 20px #a855f7;
 
 
 }
+
+
 
 
 
@@ -95,23 +227,39 @@ text-shadow:0 0 20px #a855f7;
 
 color:white;
 
+
 text-decoration:none;
+
 
 font-weight:700;
 
+
+font-size:18px;
+
+
 transition:.3s;
 
+
 }
+
 
 
 
 .home:hover{
 
+
 color:#c084fc;
+
 
 }
 
 
+
+
+
+
+
+/* HEADER */
 
 
 
@@ -120,7 +268,8 @@ color:#c084fc;
 
 text-align:center;
 
-padding:80px 20px;
+
+padding:80px 20px 50px;
 
 
 }
@@ -132,12 +281,20 @@ padding:80px 20px;
 
 font-size:90px;
 
+
+font-weight:900;
+
+
 color:#c084fc;
+
 
 
 text-shadow:
 
-0 0 30px #a855f7;
+
+0 0 30px #a855f7,
+0 0 80px #7c3aed;
+
 
 
 }
@@ -149,6 +306,7 @@ text-shadow:
 
 font-size:25px;
 
+
 color:#aaa;
 
 
@@ -157,12 +315,22 @@ color:#aaa;
 
 
 
+
+
+
+
+/* SHOP */
+
+
+
 .container{
 
 
-max-width:1100px;
+max-width:1200px;
+
 
 margin:auto;
+
 
 padding:20px;
 
@@ -172,17 +340,28 @@ padding:20px;
 
 
 
-
 .category{
 
 
 font-size:45px;
 
+
 font-weight:900;
+
 
 color:#e9d5ff;
 
-margin:60px 0 30px;
+
+margin:70px 0 30px;
+
+
+text-align:center;
+
+
+text-shadow:
+
+
+0 0 20px #a855f7;
 
 
 }
@@ -191,14 +370,16 @@ margin:60px 0 30px;
 
 
 
-.shop-grid{
+.grid{
 
 
 display:grid;
 
+
 grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
 
-gap:30px;
+
+gap:35px;
 
 
 }
@@ -212,30 +393,41 @@ gap:30px;
 
 background:rgba(20,20,30,.7);
 
-border:1px solid rgba(168,85,247,.3);
+
+padding:40px;
+
 
 border-radius:30px;
 
-padding:35px;
+
+border:1px solid rgba(168,85,247,.3);
 
 
 backdrop-filter:blur(20px);
 
 
-transition:.3s;
+transition:.4s;
 
 
 }
 
 
 
+
+
 .card:hover{
 
 
-transform:translateY(-10px);
+transform:translateY(-12px);
 
 
-box-shadow:0 0 40px rgba(168,85,247,.4);
+box-shadow:
+
+
+0 0 40px rgba(168,85,247,.4);
+
+
+border-color:#a855f7;
 
 
 }
@@ -247,12 +439,18 @@ box-shadow:0 0 40px rgba(168,85,247,.4);
 .card h2{
 
 
-color:#d8b4fe;
-
 font-size:35px;
 
 
+color:#e9d5ff;
+
+
+margin-bottom:15px;
+
+
 }
+
+
 
 
 
@@ -261,9 +459,14 @@ font-size:35px;
 
 color:#ccc;
 
-margin:20px 0;
 
 font-size:18px;
+
+
+line-height:1.5;
+
+
+margin-bottom:25px;
 
 
 }
@@ -271,12 +474,30 @@ font-size:18px;
 
 
 
+
 .soon{
+
+
+display:inline-block;
+
+
+padding:8px 18px;
+
+
+border-radius:20px;
+
+
+background:rgba(250,204,21,.15);
+
+
+border:1px solid #facc15;
 
 
 color:#facc15;
 
+
 font-weight:800;
+
 
 }
 
@@ -289,19 +510,27 @@ button{
 
 width:100%;
 
-padding:15px;
+
+margin-top:25px;
+
+
+padding:16px;
+
 
 border:none;
 
-border-radius:15px;
+
+border-radius:18px;
 
 
 background:#555;
 
-color:white;
+
+color:#aaa;
 
 
 font-size:18px;
+
 
 font-weight:800;
 
@@ -320,37 +549,56 @@ cursor:not-allowed;
 
 display:block;
 
+
 width:max-content;
 
-margin:60px auto;
+
+margin:70px auto;
+
 
 padding:15px 35px;
 
-background:#a855f7;
 
-border-radius:20px;
+background:#a855f7;
 
 
 color:white;
 
+
+border-radius:20px;
+
+
 text-decoration:none;
+
 
 font-weight:800;
 
 
+transition:.3s;
+
+
 }
+
+
+
+
+.back:hover{
+
+
+transform:scale(1.1);
+
+
+box-shadow:0 0 30px #a855f7;
+
+
+}
+
+
 
 
 
 
 @media(max-width:700px){
-
-
-.header h1{
-
-font-size:55px;
-
-}
 
 
 nav{
@@ -361,17 +609,47 @@ padding:20px;
 
 
 
+.header h1{
+
+font-size:55px;
+
 }
+
+
+.card{
+
+padding:25px;
+
+}
+
+
+
+.category{
+
+font-size:35px;
+
+}
+
+
+
+}
+
 
 
 
 
 </style>
 
+
 </head>
 
 
+
+
 <body>
+
+
+
 
 
 
@@ -393,7 +671,6 @@ MentalSMP
 </a>
 
 
-
 </nav>
 
 
@@ -402,7 +679,9 @@ MentalSMP
 
 
 
-<div class="header">
+
+
+<section class="header">
 
 
 <h1>
@@ -414,12 +693,14 @@ MentalSMP
 
 <p>
 
-Support MentalSMP and get exclusive rewards
+Support MentalSMP and unlock exclusive rewards
 
 </p>
 
 
-</div>
+</section>
+
+
 
 
 
@@ -427,6 +708,7 @@ Support MentalSMP and get exclusive rewards
 
 
 <div class="container">
+
 
 
 
@@ -443,13 +725,17 @@ Support MentalSMP and get exclusive rewards
 
 
 
-<div class="shop-grid">
+
+<div class="grid">
+
+
 
 
 
 
 
 <div class="card">
+
 
 <h2>
 
@@ -458,11 +744,13 @@ VIP
 </h2>
 
 
+
 <p>
 
-Ein besonderer Rang mit exklusiven Vorteilen.
+Get special advantages and exclusive features on MentalSMP.
 
 </p>
+
 
 
 <div class="soon">
@@ -472,8 +760,6 @@ COMING SOON
 </div>
 
 
-<br>
-
 
 <button>
 
@@ -482,13 +768,18 @@ COMING SOON
 </button>
 
 
+
 </div>
 
 
 
 
 
+
+
+
 <div class="card">
+
 
 <h2>
 
@@ -497,11 +788,13 @@ MVP
 </h2>
 
 
+
 <p>
 
-Ein höherer Rang mit noch mehr Features.
+A higher rank with more exclusive benefits.
 
 </p>
+
 
 
 <div class="soon">
@@ -511,7 +804,48 @@ COMING SOON
 </div>
 
 
-<br>
+
+<button>
+
+🔒 BUY NOW
+
+</button>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="card">
+
+
+<h2>
+
+LEGEND
+
+</h2>
+
+
+
+<p>
+
+The ultimate rank for dedicated players.
+
+</p>
+
+
+
+<div class="soon">
+
+COMING SOON
+
+</div>
+
 
 
 <button>
@@ -521,13 +855,22 @@ COMING SOON
 </button>
 
 
+
+</div>
+
+
+
+
+
+
+
 </div>
 
 
 
 
 
-</div>
+
 
 
 
@@ -548,7 +891,11 @@ COMING SOON
 
 
 
-<div class="shop-grid">
+
+
+<div class="grid">
+
+
 
 
 
@@ -565,11 +912,13 @@ Mental Key
 </h2>
 
 
+
 <p>
 
-Öffne spezielle Kisten mit einzigartigen Belohnungen.
+Open special crates with unique rewards.
 
 </p>
+
 
 
 <div class="soon">
@@ -578,8 +927,6 @@ COMING SOON
 
 </div>
 
-
-<br>
 
 
 <button>
@@ -591,6 +938,8 @@ COMING SOON
 
 
 </div>
+
+
 
 
 
@@ -603,16 +952,18 @@ COMING SOON
 
 <h2>
 
-Amethyst Crate
+Amethyst Crate Key
 
 </h2>
 
 
+
 <p>
 
-Eine seltene Kiste mit besonderen Rewards.
+A rare crate with valuable rewards.
 
 </p>
+
 
 
 <div class="soon">
@@ -621,8 +972,6 @@ COMING SOON
 
 </div>
 
-
-<br>
 
 
 <button>
@@ -642,6 +991,9 @@ COMING SOON
 
 
 </div>
+
+
+
 
 
 
@@ -657,12 +1009,17 @@ COMING SOON
 
 
 
+
+
 </div>
 
 
 
 
 
+
+
 </body>
+
 
 </html>
