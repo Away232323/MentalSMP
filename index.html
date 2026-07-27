@@ -6,55 +6,72 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>MentalSMP | Minecraft SMP Server</title>
+<title>MentalSMP | The Ultimate Minecraft SMP</title>
+
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;800;900&display=swap" rel="stylesheet">
 
 
 <style>
 
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
 }
-
 
 
 body{
 
-    background:
-    linear-gradient(
-    rgba(13,13,13,0.75),
-    rgba(13,13,13,0.95)
-    ),
-    url("https://images.unsplash.com/photo-1607513746994-51f730a44832");
+background:
+linear-gradient(
+rgba(5,5,10,.75),
+rgba(5,5,10,.95)
+),
+url("https://images.unsplash.com/photo-1607513746994-51f730a44832");
 
-    background-size:cover;
-    background-position:center;
+background-size:cover;
+background-position:center;
+background-attachment:fixed;
 
-    min-height:100vh;
+color:white;
 
-    color:white;
+overflow-x:hidden;
 
 }
 
 
 
-/* Navigation */
+/* NAV */
 
 
 nav{
 
-    width:100%;
+height:100px;
 
-    padding:25px 60px;
+padding:0 70px;
 
-    display:flex;
+display:flex;
 
-    justify-content:space-between;
+justify-content:space-between;
 
-    align-items:center;
+align-items:center;
+
+backdrop-filter:blur(15px);
+
+background:rgba(0,0,0,.35);
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+position:fixed;
+
+top:0;
+
+width:100%;
+
+z-index:10;
 
 }
 
@@ -62,14 +79,15 @@ nav{
 
 .logo{
 
-    font-size:35px;
+font-size:38px;
 
-    color:#9b59ff;
+font-weight:900;
 
-    font-weight:bold;
+color:#a855f7;
 
-    text-shadow:
-    0 0 20px #9b59ff;
+text-shadow:
+0 0 15px #a855f7,
+0 0 40px #7c3aed;
 
 }
 
@@ -77,15 +95,17 @@ nav{
 
 .links a{
 
-    color:white;
+color:white;
 
-    text-decoration:none;
+text-decoration:none;
 
-    margin-left:30px;
+margin-left:35px;
 
-    font-size:20px;
+font-size:18px;
 
-    transition:.3s;
+font-weight:600;
+
+transition:.3s;
 
 }
 
@@ -93,31 +113,32 @@ nav{
 
 .links a:hover{
 
-    color:#9b59ff;
+color:#a855f7;
+
+text-shadow:0 0 15px #a855f7;
 
 }
 
 
 
-
-/* Hauptbereich */
+/* HERO */
 
 
 .hero{
 
-    height:80vh;
+min-height:100vh;
 
-    display:flex;
+display:flex;
 
-    flex-direction:column;
+flex-direction:column;
 
-    justify-content:center;
+justify-content:center;
 
-    align-items:center;
+align-items:center;
 
-    text-align:center;
+text-align:center;
 
-    animation:show 1.2s ease;
+padding:120px 20px 50px;
 
 }
 
@@ -125,12 +146,25 @@ nav{
 
 .hero h1{
 
-    font-size:90px;
 
-    color:#9b59ff;
+font-size:110px;
 
-    text-shadow:
-    0 0 30px #9b59ff;
+font-weight:900;
+
+letter-spacing:5px;
+
+color:#a855f7;
+
+
+text-shadow:
+
+0 0 20px #a855f7,
+0 0 50px #7c3aed,
+0 0 100px #4c1d95;
+
+
+animation:float 3s infinite ease-in-out;
+
 
 }
 
@@ -138,29 +172,51 @@ nav{
 
 .hero p{
 
-    margin-top:20px;
+font-size:32px;
 
-    color:#bdbdbd;
+color:#ddd;
 
-    font-size:28px;
+margin-top:20px;
 
 }
 
 
 
+/* SERVER BOX */
 
 
-.ip-box{
+.server-box{
 
-    margin-top:40px;
 
-    background:#151515;
+margin-top:45px;
 
-    padding:20px 40px;
+padding:35px 70px;
 
-    border-radius:20px;
+background:
 
-    border:1px solid #333;
+rgba(20,20,30,.75);
+
+border-radius:30px;
+
+border:1px solid rgba(168,85,247,.4);
+
+backdrop-filter:blur(20px);
+
+
+box-shadow:
+
+0 0 40px rgba(168,85,247,.25);
+
+
+}
+
+
+
+.server-title{
+
+color:#aaa;
+
+font-size:18px;
 
 }
 
@@ -168,9 +224,29 @@ nav{
 
 .ip{
 
-    color:#9b59ff;
+font-size:35px;
 
-    font-size:25px;
+font-weight:900;
+
+color:#c084fc;
+
+margin:10px 0;
+
+
+}
+
+
+
+
+.buttons{
+
+display:flex;
+
+gap:20px;
+
+justify-content:center;
+
+margin-top:30px;
 
 }
 
@@ -178,23 +254,27 @@ nav{
 
 button{
 
-    margin-top:20px;
 
-    background:#9b59ff;
+padding:18px 40px;
 
-    border:none;
+border-radius:15px;
 
-    color:white;
+border:none;
 
-    padding:15px 35px;
+font-size:18px;
 
-    border-radius:15px;
+font-weight:700;
 
-    font-size:20px;
+cursor:pointer;
 
-    cursor:pointer;
 
-    transition:.3s;
+background:#a855f7;
+
+color:white;
+
+
+transition:.3s;
+
 
 }
 
@@ -202,43 +282,184 @@ button{
 
 button:hover{
 
-    transform:scale(1.08);
 
-    box-shadow:0 0 25px #9b59ff;
+transform:translateY(-5px) scale(1.05);
+
+box-shadow:
+0 0 30px #a855f7;
+
 
 }
 
 
 
 
-/* Animation */
+.discord{
 
 
-@keyframes show{
-
-from{
-
-opacity:0;
-
-transform:translateY(60px);
+background:#5865F2;
 
 }
 
-to{
 
-opacity:1;
+
+
+/* STATUS */
+
+
+.status{
+
+
+margin-top:30px;
+
+display:flex;
+
+gap:25px;
+
+justify-content:center;
+
+
+}
+
+
+
+.status div{
+
+
+background:rgba(255,255,255,.08);
+
+padding:15px 30px;
+
+border-radius:15px;
+
+
+border:1px solid rgba(255,255,255,.1);
+
+
+}
+
+
+
+
+/* FEATURES */
+
+
+.features{
+
+
+padding:80px 10%;
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:30px;
+
+
+}
+
+
+
+
+.card{
+
+
+background:rgba(20,20,30,.7);
+
+padding:35px;
+
+border-radius:25px;
+
+
+border:1px solid rgba(168,85,247,.25);
+
+
+transition:.4s;
+
+
+}
+
+
+
+.card:hover{
+
+
+transform:translateY(-15px);
+
+
+box-shadow:
+
+0 0 35px rgba(168,85,247,.4);
+
+
+}
+
+
+
+.card h2{
+
+color:#c084fc;
+
+margin-bottom:15px;
+
+font-size:25px;
+
+}
+
+
+
+.card p{
+
+color:#bbb;
+
+}
+
+
+
+
+/* FOOTER */
+
+
+footer{
+
+text-align:center;
+
+padding:40px;
+
+color:#888;
+
+}
+
+
+
+/* ANIMATION */
+
+
+@keyframes float{
+
+
+0%,100%{
 
 transform:translateY(0);
 
 }
 
+
+50%{
+
+transform:translateY(-15px);
+
+}
+
+
 }
 
 
 
-/* Handy */
 
-@media(max-width:700px){
+
+@media(max-width:800px){
+
 
 nav{
 
@@ -246,14 +467,18 @@ padding:20px;
 
 flex-direction:column;
 
+height:auto;
+
 }
+
 
 
 .links{
 
-margin-top:20px;
+margin-top:15px;
 
 }
+
 
 
 .hero h1{
@@ -263,7 +488,26 @@ font-size:55px;
 }
 
 
+
+.hero p{
+
+font-size:20px;
+
 }
+
+
+
+.server-box{
+
+padding:30px;
+
+}
+
+
+
+}
+
+
 
 </style>
 
@@ -271,8 +515,8 @@ font-size:55px;
 </head>
 
 
-
 <body>
+
 
 
 <nav>
@@ -299,7 +543,6 @@ MentalSMP
 </div>
 
 
-
 </nav>
 
 
@@ -310,23 +553,29 @@ MentalSMP
 
 
 <h1>
+
 MentalSMP
+
 </h1>
 
 
 
 <p>
+
 The Ultimate Minecraft SMP Experience
+
 </p>
 
 
 
 
-<div class="ip-box">
+<div class="server-box">
 
 
-<div>
-Server IP:
+<div class="server-title">
+
+Minecraft Server IP
+
 </div>
 
 
@@ -338,9 +587,19 @@ MentalSMP.eu
 
 
 
+<div class="buttons">
+
+
 <button onclick="copyIP()">
 
 Copy IP
+
+</button>
+
+
+<button class="discord" onclick="window.open('https://discord.gg/rwNNH5crgm')">
+
+Discord
 
 </button>
 
@@ -349,7 +608,106 @@ Copy IP
 
 
 
+<div class="status">
+
+
+<div>
+
+🟢 Online
+
+</div>
+
+
+<div>
+
+⚔ SMP 1.21
+
+</div>
+
+
+<div>
+
+👥 0/100 Players
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
 </section>
+
+
+
+
+
+
+<section class="features">
+
+
+
+<div class="card">
+
+<h2>⚔ Custom SMP</h2>
+
+<p>
+Eigene Items, besondere Enchants und einzigartige Features.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🔥 Competitive PvP</h2>
+
+<p>
+Spannende Kämpfe und ein faires Regelwerk.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🌎 Adventure World</h2>
+
+<p>
+Erkunde eine Welt voller Geheimnisse und Möglichkeiten.
+</p>
+
+</div>
+
+
+
+<div class="card">
+
+<h2>🏆 Ranks</h2>
+
+<p>
+Verdiene besondere Ränge und exklusive Vorteile.
+</p>
+
+</div>
+
+
+</section>
+
+
+
+
+<footer>
+
+© 2026 MentalSMP • The Ultimate Minecraft SMP
+
+</footer>
+
 
 
 
@@ -359,9 +717,13 @@ Copy IP
 
 function copyIP(){
 
+
 navigator.clipboard.writeText("MentalSMP.eu");
 
-alert("Server IP copied!");
+
+alert("MentalSMP.eu wurde kopiert!");
+
+
 
 }
 
@@ -371,6 +733,5 @@ alert("Server IP copied!");
 
 
 </body>
-
 
 </html>
